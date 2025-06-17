@@ -1,0 +1,23 @@
+# ============================================
+# 🔧 CONFIGURATION AWS TERRAFORM
+# ============================================
+
+# AWS Credentials (OBLIGATOIRE)  / AWS Credentials (MANDATORY)
+aws_access_key_id     = ""  # Votre AWS Access Key
+aws_secret_access_key = ""     # Votre AWS Secret Key
+
+# Région AWS (Choisissez la plus proche) / AWS region (Select the nearest)
+aws_region = "eu-west-3"  # Paris
+# aws_region = "eu-west-1"  # Irlande
+# aws_region = "us-east-1"  # Virginie
+
+# Configuration SSH / Configuration SSH
+ssh_name_public_key = "id_rsa.pub"
+ssh_key_name        = "id_rsa"
+
+# Instances (Free Tier compatible) / Instances (Free Tier compatible) 
+instance_type = "t2.micro"  # Gratuit
+disk_size     = 8           # Minimum gratuit
+
+# Personnalisation (Optionnel) / Personnalisation (Optionnel)
+name_machine_prefix = "mon-projet"
