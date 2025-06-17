@@ -216,8 +216,8 @@ name_machine_prefix = "my-project"  # Custom prefix / Préfixe personnalisé
 
 ```bash
 # Clone repository / Cloner le dépôt
-git clone https://github.com/your-username/aws-terraform-ansible.git
-cd aws-terraform-ansible/terraform
+git clone https://github.com/Foufou-exe/iac-terraform-ansible-aws-webserver-demo/aws-terraform-ansible.git
+cd iac-terraform-ansible-aws-webserver-demo/terraform
 ```
 
 ### 🔧 Étape 2 : Initialiser Terraform / Step 2: Initialize Terraform
