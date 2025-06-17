@@ -1,0 +1,21 @@
+---
+- name: Sauvegarde automatique du serveur web
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Création du script de backup
+      copy:
+        content: |
+          #!/bin/bash
+          DATE=$(date +%Y%m%d_%H%M%S)
+          tar -czf /tmp/backup_$DATE.tar.gz /var/www/html /etc/apache2
+          echo "Backup créé: backup_$DATE.tar.gz"
+        dest: /usr/local/bin/backup-web.sh
+        mode: "0755"
+
+    - name: Programmation du backup quotidien
+      cron:
+        name: "Backup quotidien du serveur web"
+        minute: "0"
+        hour: "2"
+        job: "/usr/local/bin/backup-web.sh"
